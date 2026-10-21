@@ -1,0 +1,1 @@
+UPDATE categories SET "ImageUrl"='http://localhost:5230/images/local/cat_'||"Id"||'.jpg' WHERE "Id" IN (13,8,31,20,25,1,2,32,14,7,9,21,26,3,12,15,33,10,22,27,4,23,16,11,34,28,19,5,17,29,24,6,18,30);

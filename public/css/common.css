@@ -1,0 +1,85 @@
+/* Bổ sung nhỏ cho bản Laravel (Blade) */
+
+/* Feather icon inline giống react-icons (1em) */
+svg.feather { vertical-align: -0.125em; flex-shrink: 0; }
+
+/* Danh sách danh mục sidebar */
+.shop-cat-list, .shop-cat-sub { list-style: none; padding: 0; margin: 0; }
+.text-shop-orange { color: var(--shop-orange); }
+
+/* Toast nằm trên modal */
+.Toastify__toast-container { z-index: 99999; }
+
+/* Header dropdown (thay cho state React) */
+.shop-user-menu, .shop-mega { display: none; }
+.shop-user-menu.show { display: block; }
+.shop-nav-cat-wrap:hover .shop-mega, .shop-mega.show { display: grid; }
+
+/* Admin: submenu đơn hàng thu gọn */
+.submenu-list.collapsed { display: none; }
+
+/* Sao đánh giá chọn được */
+.rating-picker svg { cursor: pointer; }
+
+/* Trang giỏ hàng: cột tên co giãn, số lượng / thành tiền / nút xóa thẳng hàng bên phải */
+.shop-page-title { margin-top: 24px; }
+.cart-row { padding: 16px 0; }
+.cart-row-img { flex-shrink: 0; }
+.cart-row-info { flex: 1 1 auto; min-width: 0; }
+.cart-row-name { font-weight: 600; color: var(--shop-text); }
+.cart-row-price { font-size: 13.5px; margin-top: 2px; }
+.cart-row .qty-stepper { flex-shrink: 0; }
+.cart-row-subtotal { flex-shrink: 0; width: 130px; text-align: right; }
+.cart-row-delete { flex-shrink: 0; width: 32px; text-align: center; }
+
+/* ── Responsive cho điện thoại/máy tính bảng (chỉ áp dụng < 992px, desktop giữ nguyên) ── */
+@media (max-width: 991.98px) {
+  .shop-topbar-fallback { height: auto; padding: 10px 12px; font-size: 14px; flex-wrap: wrap; gap: 6px 10px; text-align: center; }
+  .shop-topbar-fallback .pill { font-size: 12px; padding: 4px 12px; }
+  .shop-header-inner { flex-wrap: wrap; gap: 10px; padding: 12px 16px; }
+  .shop-logo { flex: 1 1 auto; min-width: 0; }
+  .shop-search { order: 10; flex: 1 1 100%; max-width: none; }
+  .shop-cart-btn { padding: 0 14px; }
+  .shop-nav-inner { flex-wrap: wrap; padding: 0; }
+  .shop-nav-cat-wrap { flex: 1 1 100%; }
+  .shop-nav-cat, .shop-nav-cat-wrap .shop-nav-cat { min-width: 0; height: 46px; }
+  .shop-nav-menu { flex-wrap: wrap; gap: 0; }
+  .shop-nav-menu a { height: 42px; padding: 0 12px; font-size: 14px; }
+  .shop-nav-promo { display: none; }
+  .shop-mega { width: 100%; max-width: 100vw; grid-template-columns: repeat(2, 1fr); padding: 16px; }
+  .shop-floats { left: 8px; bottom: 12px; gap: 6px; }
+  .shop-float { padding: 6px 12px; font-size: 11.5px; }
+  .cart-row { flex-wrap: wrap; padding: 14px 0; }
+  .cart-row-info { flex: 1 1 calc(100% - 90px); }
+  .cart-row-subtotal { width: auto; flex: 1 1 auto; }
+  .order-timeline .ot-label { font-size: 11px; }
+  .order-info-row .oi-label { min-width: 120px; }
+  .shop-auth-card { padding: 24px 18px; }
+}
+@media (max-width: 575.98px) {
+  .shop-logo-badge { width: 44px; height: 44px; border-radius: 12px; }
+  .shop-logo-badge svg { width: 28px; height: 28px; }
+  .shop-header-inner { gap: 8px; }
+  .shop-logo { flex: 1 1 0; gap: 8px; }
+  .shop-logo .logo-text { font-size: 16px; line-height: 1.15; }
+  .shop-logo .logo-text small { font-size: 8px; letter-spacing: 1px; }
+  .shop-cart-btn { height: 40px; font-size: 0; gap: 0; padding: 0 12px; }
+  .shop-cart-btn svg { font-size: 18px; }
+  #userMenuWrap .btn-shop-outline { padding: 8px 12px; font-size: 13px; }
+  .shop-grid, .shop-grid-5 { gap: 10px; }
+  .product-card .pc-body { padding: 10px; }
+  .product-card .pc-price { font-size: 15px; }
+  .product-card .pc-price .old { display: block; margin-left: 0; }
+  .pd-price { font-size: 24px; }
+  .shop-footer-inner { grid-template-columns: 1fr; padding: 28px 16px; gap: 18px; }
+  .shop-section-title { font-size: 15px; padding: 8px 14px; }
+  .shop-user-menu { right: -60px; }
+}
+
+/* Badge VNPay */
+.badge-vnpay { display:inline-flex; align-items:center; gap:4px; background:#e8f1ff; color:#005baa; border-radius:6px; padding:2px 8px; font-size:12px; font-weight:700; }
+.pm-option { display:flex; align-items:center; gap:10px; border:1px solid var(--shop-border); border-radius:10px; padding:10px 14px; margin-bottom:8px; cursor:pointer; transition:all .15s; }
+.pm-option:hover { border-color:#bcd6ee; background:var(--shop-soft); }
+.pm-option input { margin:0; }
+.pm-option.active { border-color:var(--shop-blue); background:#eaf4fc; }
+.pm-option .pm-logo { margin-left:auto; height:22px; }
